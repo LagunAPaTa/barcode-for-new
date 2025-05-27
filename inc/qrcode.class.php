@@ -43,6 +43,8 @@ if (!defined('GLPI_ROOT')) {
     die("Sorry. You can't access directly to this file");
 }
 
+require_once __DIR__ . '/../vendor/deltalab/phpqrcode/phpqrcode.php';
+
 class PluginBarcodeQRcode {
 
    function generateQRcode($itemtype, $items_id, $rand, $number, $data) {
