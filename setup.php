@@ -39,12 +39,12 @@
    ------------------------------------------------------------------------
  */
 
-define ("PLUGIN_BARCODE_VERSION", "2.7.1");
+define ("PLUGIN_BARCODE_VERSION", "2.8.0");
 
 // Minimal GLPI version, inclusive
 define('PLUGIN_BARCODE_MIN_GLPI', '10.0.0');
 // Maximum GLPI version, exclusive
-define('PLUGIN_BARCODE_MAX_GLPI', '10.0.99');
+define('PLUGIN_BARCODE_MAX_GLPI', '11.0.99');
 
 // Init the hooks of the plugins -Needed
 function plugin_init_barcode() {
