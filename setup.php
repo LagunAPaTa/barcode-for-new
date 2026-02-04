@@ -120,11 +120,6 @@ function plugin_barcode_check_prerequisites() {
 // Check configuration process for plugin : need to return true if succeeded
 // Can display a message only if failure and $verbose is true
 function plugin_barcode_check_config($verbose = false) {
-   if (true) { // Your configuration check
-      return true;
-   }
-   if ($verbose) {
-      echo "Installed, but not configured";
-   }
-   return false;
+   // No special configuration needed
+   return true;
 }
