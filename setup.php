@@ -106,3 +106,25 @@ function plugin_version_barcode() {
       ]
    ];
 }
+
+// Check prerequisites before install : may print errors or add to message after redirect
+function plugin_barcode_check_prerequisites() {
+   if (version_compare(GLPI_VERSION, PLUGIN_BARCODE_MIN_GLPI, 'lt')
+       || version_compare(GLPI_VERSION, PLUGIN_BARCODE_MAX_GLPI, 'ge')) {
+      echo "This plugin requires GLPI >= " . PLUGIN_BARCODE_MIN_GLPI . " and < " . PLUGIN_BARCODE_MAX_GLPI . "<br>";
+      return false;
+   }
+   return true;
+}
+
+// Check configuration process for plugin : need to return true if succeeded
+// Can display a message only if failure and $verbose is true
+function plugin_barcode_check_config($verbose = false) {
+   if (true) { // Your configuration check
+      return true;
+   }
+   if ($verbose) {
+      echo "Installed, but not configured";
+   }
+   return false;
+}
