@@ -66,14 +66,14 @@ This document summarizes all changes made to ensure the Barcode plugin is fully 
 
 ### Fixed Primary Key Naming
 ```sql
--- Old (incorrect)
+-- Old (inconsistent with column name)
 PRIMARY KEY (`ID`)
 
--- New (correct)
+-- New (consistent with column name)
 PRIMARY KEY (`id`)
 ```
 
-This ensures consistency with GLPI 11 database conventions.
+This ensures consistency with the column definition and GLPI 11 database conventions.
 
 ## Compatibility Testing Checklist
 
